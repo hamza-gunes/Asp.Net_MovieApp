@@ -33,37 +33,12 @@ namespace MovieApp.Web
             {
 
                 endpoints.MapControllerRoute(
-                    
-                    name: "home",
-                    pattern: "/",
-                    defaults: new {controller = "Home", action = "Index"}
-                    
-                );
 
-                endpoints.MapControllerRoute(
-
-                    name: "about",
-                    pattern: "about",
-                    defaults: new { controller = "Home", action = "About" }
+                    name: "default",
+                    pattern: "{controller=home}/{action=Index}/{id?}"
 
                 );
 
-                endpoints.MapControllerRoute(
-
-                    name: "movieList",
-                    pattern: "movies/details",
-                    defaults: new { controller = "Movies", action = "Details" }
-
-                );
-
-                endpoints.MapControllerRoute(
-
-                    name: "movie",
-                    name: "movieDetails",
-                    pattern: "movies/details",
-                    defaults: new { controller = "Movies", action = "Details" }
-
-                );
             });
         }
     }
