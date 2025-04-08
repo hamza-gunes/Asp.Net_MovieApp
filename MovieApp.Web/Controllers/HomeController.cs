@@ -4,15 +4,15 @@ namespace MovieApp.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return "anasayfa";
+            return View();
 
         }
 
-        public string About()
+        public IActionResult About()
         {
-            return "hakkımızda";
+            return View();
         }
     }
 }

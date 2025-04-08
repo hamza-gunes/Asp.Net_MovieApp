@@ -5,19 +5,19 @@ namespace MovieApp.Web.Controllers
     public class MoviesController : Controller
     {
 
-        public string Index()
+        public IActionResult Index()
         {
-            return "Film index";
+            return View();
         }
 
-        public string List()
+        public IActionResult List()
         {
-            return "Film listesi";
+            return View("Movies");
         }
 
-        public string Details()
+        public IActionResult Details()
         {
-            return "Film detay";
+            return View();
         }
     }
 }
